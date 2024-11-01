@@ -1,6 +1,60 @@
+.navbar{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 50px;
+  margin-bottom: 25px;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar li{
+  position: relative;
+  padding: 20px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 15px;
+  font-size: 1.2em;
+}
+
+#menus{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  padding: 8px 15px;
+  transition: background 0.3s;    
+}
+
+.navbar a:hover {
+  background-color: grey;
+  border-radius: 4px;
+  
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 15px;
+  font-size: 1.2em;
+}
+
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    background-color: whitesmoke;
     margin: 0;
 }
 #home::before{
@@ -20,86 +74,46 @@ body{
     display: grid;
     place-items: center;
     margin-top: 10px; 
-}
-.navbar{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    padding: 5px 10px;
-    margin: 17px;
-    color: white;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-    
-}
-
-.navbar li{
-    position: relative;
-    padding: 20px;
-}
-
-.navbar .nav-links {
-    display: flex;
-    gap: 15px;
-    font-size: 1.2em;
-}
-
-#menus{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex; 
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 15px;
-    transition: background 0.3s;    
   }
 
-  .navbar a:hover {
-    background-color: #000000;
-    border-radius: 4px;
-  }
-  
-  .navbar .nav-links {
-    display: flex;
-    gap: 15px;
-    font-size: 1.2em;
-  }
+#icon{
+  width: 100px; 
+  height: 100px; 
+  border-radius: 55%; 
+  overflow: hidden; 
+  background-color: white;
+}
 
   .submenu {
     display: none; 
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgb(104, 103, 103);
+    background-color: white;
     padding: 10px 0;
     list-style: none;
     min-width: 150px;
     border: 2px solid rgb(83, 2, 2); 
     border-radius: 8px; 
+    
 }
 
 .submenu li {
     padding: 10px;
+    
 }
 
 .has-submenu:hover .submenu {
     display: block;
+    
 }
 
   h1{
     
     font-size: 3em; 
     font-weight: bold;
-    color: white;
+    color: black;
+    background-color: rgba(255,255,255,0.7);
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -116,14 +130,32 @@ body{
     width:900px ;
   }
 
-  #historia, h2{
+  h2{
     padding: 2%;
     text-align: center;
   }
 
+  .cartao{
+    margin-top: 1%;
+    max-width: 60%; 
+    margin: 2 auto;
+    padding: 20px; 
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+
+  #historia{
+    
+    padding: 2%;
+    text-align: center;  
+  }
+
+
   #historia p{
     text-align: justify;
     text-indent: 20px;
+    margin: 20px;
   }
 
   .mais {
@@ -142,7 +174,7 @@ body{
 }
 
 #leiaMaisBtn:hover {
-    background-color: #0056b3; 
+    background-color: gray; 
 }
   footer{
     background-color: gray;
@@ -150,3 +182,4 @@ body{
     text-align:center;
     font-weight: bold;
   }
+  

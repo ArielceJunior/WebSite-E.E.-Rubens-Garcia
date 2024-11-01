@@ -12,33 +12,35 @@
     <title>E.E. Rubens Garcia</title>
 </head>
 <body>
-
-    <div class="logo"><img src="assets/logo.png" alt="LogoEscola" style="width: 85px;"></div>
-    <nav class="navbar">
-        <div class="nav-links">
-    <ul id="menus">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#historia">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li class="has-submenu">
-        <a href="#gestao">Gestão</a>
-        <ul class="submenu">
-            <li><a href="gestao.html">Diretoria</a></li>
-            <li><a href="#pedagogia">Pedagógica</a></li>
-            <li><a href="#financeira">Financeira</a></li>
-            <li><a href="#marketing">Marketing</a></li>
+    <header> 
+        <nav class="navbar">
+            <div class="nav-links">
+        <ul id="menus">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#historia">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li class="has-submenu">
+            <a href="gestao.html">Gestão</a>
+            <ul class="submenu">
+                <li><a href="gestao.html#diretoria">Diretoria</a></li>
+                <li><a href="#pedagogia">Pedagógica</a></li>
+                <li><a href="#financeira">Financeira</a></li>
+                <li><a href="#marketing">Marketing</a></li>
+            </ul>
+            <li><a href="#eventos">Eventos</a></li>
+                </li>
         </ul>
-        <li><a href="#eventos">Eventos</a></li>
-            </li>
-    </ul>
-        </div>
-      </nav>
-        
+            </div>
+          </nav>
+    
+    </header>
+    <div class="logo"><img src="assets/logo.jpg" id= "icon" alt="LogoEscola"></div>
+   
     <div id="home">
         <h1>Escola Estadual Rubens Garcia</h1>
         <img src="assets/fundo.jpg" alt="" style=" display: grid;place-items: center;">
     
-    <div id="historia">
+    <div id="historia" class="cartao">
     <h2>História</h2>
     <p>Pensar em educação não é privilégio de muitos, mas de poucos. E um deles, o saudoso Deputado cidadão Machadense <strong>Rubens Pinto Garcia</strong>, que tomou a grande iniciativa de trazer para Machado o NEEC – (Núcleo de Ensino e Extensão Comunitário), através do requerimento n° 1.286/87. Ciente dos benefícios advindos e identificando com as aspirações do povo de Machado com o objetivo de educar para o trabalho os jovens de 14 a 20 anos de idade para o convívio social. Antes da sua morte, Rubens Garcia já acamado, pediu ao prefeito Carlos Alberto Pereira Dias e ao vereador Nelson Garcia Júnior que não deixassem de trabalhar pela grande conquista...</p>
     <span class="mais">
@@ -48,8 +50,8 @@
             <p>Com o Decreto 36 759 de 31 de março do ano de 1995 a Escola Estadual Anexa ao Colégio Imaculada Conceição, situada à Rua Rubi, 88 - Jardim Nova Esperança, passa a denominar-se <strong>ESCOLA ESTADUAL RUBENS GARCIA</strong>, conforme publicação no Minas Gerais 05/04/95, Diário do Executivo, pág. 06, coluna 02.</p>
             <p>Em janeiro do ano de 1992, o moderno e funcional prédio entra em plena atividade. O primeiro impacto foi a incerteza... Um prédio inacabado, mas aos poucos este espaço foi ganhando vida, luz... Foi adquirindo seu verdadeiro perfil de <strong>ESCOLA</strong></p>
             <p>As cores começaram a chegar nas salas de aula, e com elas os mobiliários e equipamentos vindos da secretaria do Estado da Educação. E sob a Direção de Nilce Clara Juntolli inicia-se o ano letivo no dia 03 de fevereiro de 1992 com profissionais cheios de ideais, de garra e esperança. A escola foi estruturada em dois turnos: <br>
-                <br> ●	Turno Matutino – atendimento aos alunos novatos.
-                <br>●	Turno vespertino - atendimento aos alunos que vinham do CIC, transportados em Kombis ou veículos da própria família.
+                <br> ●  Turno Matutino - atendimento aos alunos novatos.
+                <br> ●  Turno Vespertino - atendimento aos alunos que vinham do CIC, transportados em Kombis ou veículos da própria família.
             </p>
             <p>Após o afastamento para aposentadoria da senhorita Nilce Clara Juntolli, assume a Direção no mês de novembro de 1992, Elaine Marília Santos Rajão Swerts, exercendo o mandato por um ano e tendo como vice-diretora Maria Célia Brigagão Carvalho. Em 1994 até 1999 exerceu o cargo de diretora Maria Helena Siqueira Gonçalves, tendo como vice nos anos de 1998 e 1999, Márcia Pereira Ferri Gonçalves.</p>
             <p>No ano de 2000 assumiu a direção da escola, Carmen Maria Moreira, tendo tido como vice-diretora de 2000 até o ano de 2002 Marluce Aparecida de Azevedo, e a partir de Julho de 2007 assumiu a vice direção Márcio Moterani Swerts.</p>
@@ -62,20 +64,21 @@
         </span>
             <button id="leiaMaisBtn">Leia Mais</button>
     </div>
-    <div><h2>Conheça a Escola</h2>
+    <div id="know" class="cartao">
+        <h2>Conheça a Escola</h2>
         <!-- Vídeo no YouTube -->
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Mex0qEOHaDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         
     </div>
     
-    <div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.575181432965!2d-45.93093877963168!3d-21.684575008776243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ca149a48594115%3A0x532d592479005b05!2sEscola%20Estadual%20Rubens%20Garcia%20-%20NEEC!5e0!3m2!1spt-BR!2sbr!4v1730250669253!5m2!1spt-BR!2sbr" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="cartao">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.575181432965!2d-45.93093877963168!3d-21.684575008776243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ca149a48594115%3A0x532d592479005b05!2sEscola%20Estadual%20Rubens%20Garcia%20-%20NEEC!5e0!3m2!1spt-BR!2sbr!4v1730250669253!5m2!1spt-BR!2sbr" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 <!-- Planilha https://docs.google.com/spreadsheets/d/1vMdD_THYKCh_vdTxZAoILCOlwNR0KkaI5UhdVYB7gXE/edit?gid=0#gid=0 -->
-<div id="eventos">
+<div id="eventos" class="cartao">
     <h2>Eventos</h2>
-    <table class="table" id="actions-table">
+    <table class="table" id="actions-table" style="align-items: center;">
         <thead class="custom-blue-header">
             <tr>
                 <th>Ação</th>
