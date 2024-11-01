@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
     <!-- Seu arquivo CSS personalizado -->
     <link rel="stylesheet" href="styles.css">
     <title>E.E. Rubens Garcia</title>
 </head>
+<div class="container">
 <body>
     <header> 
         <nav class="navbar">
@@ -30,6 +31,7 @@
 
             </ul>
             <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#contato">Contatos</a></li>
             
             
                 </li>
@@ -41,11 +43,49 @@
     <div class="logo"><img src="assets/logo.jpg" id= "icon" alt="LogoEscola"></div>
    
     <div id="home">
+        <div id="nome">
         <h1>Escola Estadual Rubens Garcia</h1>
-        <img class="cartao2" src="assets/fundo.jpg" alt="fundo" style=" display: grid;place-items: center;">
+        </div>
+        <!-- <img class="cartao2" src="assets/fundo.jpg" alt="fundo" style=" display: grid;place-items: center;"> -->
     
-    <div id="historia" class="cartao">
+    <div id="know" class="cartaoc">
+       
+        <!-- Vídeo no YouTube -->
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="assets/fundo.jpg" alt="Imagem 1">
+            <div class="carousel-text">
+                <h3>Escola</h3>
+                <p>Teste</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/img2.jpeg" alt="Imagem 2">
+            <div class="carousel-text">
+                <h3>Lua séria</h3>
+                <p>Lua analisando a situação.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/img3.jpeg" alt="Imagem 3">
+            <div class="carousel-text">
+                <h3>Lua boba</h3>
+                <p>Lua analisou e ficou boba.</p>
+            </div>
+        </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+</div>
+
+<iframe style="margin-top: 80px;" width="760" height="515" src="https://www.youtube.com/embed/Mex0qEOHaDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+
+<div id="historia" class="cartao">
     <h2>História</h2>
+    <div class="hist-content">
     <p>Pensar em educação não é privilégio de muitos, mas de poucos. E um deles, o saudoso Deputado cidadão Machadense <strong>Rubens Pinto Garcia</strong>, que tomou a grande iniciativa de trazer para Machado o NEEC – (Núcleo de Ensino e Extensão Comunitário), através do requerimento n° 1.286/87. Ciente dos benefícios advindos e identificando com as aspirações do povo de Machado com o objetivo de educar para o trabalho os jovens de 14 a 20 anos de idade para o convívio social. Antes da sua morte, Rubens Garcia já acamado, pediu ao prefeito Carlos Alberto Pereira Dias e ao vereador Nelson Garcia Júnior que não deixassem de trabalhar pela grande conquista...</p>
     <span class="mais">
             <p>Com seu falecimento no dia 14/05/1989 o deputado Rubens Garcia é substituído pelo deputado Benê Guedes na Assembleia Legislativa do Estado. Este assume, também a causa do deputado machadense com relação a Machado especialmente quanto ao NEEC. O prédio foi construído pelo DEOP (Departamento Estadual de Obras Públicas) com o apoio da prefeitura municipal de Machado que fez a doação do terreno para o Estado, no bairro Santo Amaro. Infelizmente sem a sua filosofia original: “Assistência Integral ao Educando”, mas como Escola Estadual.</p>
@@ -68,35 +108,79 @@
         </span>
             <button id="leiaMaisBtn">Leia Mais</button>
     </div>
-    <div id="know" class="cartao">
-        <h2>Conheça a Escola</h2>
-        <!-- Vídeo no YouTube -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Mex0qEOHaDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
-    </div>
+</div>
     
-    <div class="cartao">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.575181432965!2d-45.93093877963168!3d-21.684575008776243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ca149a48594115%3A0x532d592479005b05!2sEscola%20Estadual%20Rubens%20Garcia%20-%20NEEC!5e0!3m2!1spt-BR!2sbr!4v1730250669253!5m2!1spt-BR!2sbr" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="cartao"  id="eventos">
+    <section id="actions-table">
+        <h2>Eventos</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ação</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados CSV serão inseridos aqui via JavaScript -->
+            </tbody>
+        </table>
+    </section>
+</div>
+
+    <div style="display: flex;">
+
+    <div id="contatos" class="cartao" style="padding: 50 50;">
+        <h2>Contato</h2>
+        <p><strong>Endereço:</strong> R. Rubi, 88 - Jardim Nova Esperança, Machado - MG, 37750-000</p>
+        <p><strong>Telefone 1:</strong> (35) 3295-3051</p>
+        <p><strong>Telefone 2:</strong> (00) 1234-5678</p>
+        <p><strong>E-mail:</strong> </p>
+        <p><strong>E-mail:</strong> </p>
+        
+        <p><strong> Siga-nos nas redes sociais:</strong></p>
+        <div class="contact-links">
+            <a href="https://www.facebook.com/pereiralilianecarvalho" target="_blank">
+                <img src="assets/face.png" alt="Facebook" class="contact-icon"> Facebook
+            </a>
+            <a href="https://www.instagram.com/eerubensgarcia/" target="_blank">
+                <img src="assets/insta.png" alt="Instagram" class="contact-icon"> Instagram
+            </a>
+            <a href="https://www.youtube.com/@escolaestadualrubensgarcia9256" target="_blank">
+                <img src="assets/youtube.png" alt="YouTube" class="contact-icon"> YouTube
+            </a>
+        </div>
     </div>
-</div>
+        <div id="map" class="cartao">
+            <h2>Como chegar</h2>
+            <p style="font-weight: bold; text-align: center;"></p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.575181432965!2d-45.93093877963168!3d-21.684575008776243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ca149a48594115%3A0x532d592479005b05!2sEscola%20Estadual%20Rubens%20Garcia%20-%20NEEC!5e0!3m2!1spt-BR!2sbr!4v1730250669253!5m2!1spt-BR!2sbr" width="500" height="400" style="border:0; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    
+    </div>
 <!-- Planilha https://docs.google.com/spreadsheets/d/1vMdD_THYKCh_vdTxZAoILCOlwNR0KkaI5UhdVYB7gXE/edit?gid=0#gid=0 -->
-<div id="eventos" class="cartao">
-    <h2>Eventos</h2>
-    <table class="table" id="actions-table" style="align-items: center;">
-        <thead class="custom-blue-header">
-            <tr>
-                <th>Ação</th>
-                <th>Descrição</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-        </tbody>
-    </table>
+
+
+
 </div>
+
+
 
 <footer>
     <p>&copy; 2024 Escola Estadual Rubens Garcia</p>
+
+    <p>Siga-nos nas redes sociais:</p>
+    <div class="social-links">
+        <a href="https://www.facebook.com/pereiralilianecarvalho" target="_blank">
+            <img src="assets/face.png" alt="Facebook" class="social-icon"> Facebook
+        </a>
+        <a href="https://www.instagram.com/eerubensgarcia/" target="_blank">
+            <img src="assets/insta.png" alt="Instagram" class="social-icon"> Instagram
+        </a>
+        <a href="https://www.youtube.com/@escolaestadualrubensgarcia9256" target="_blank">
+            <img src="assets/youtube.png" alt="YouTube" class="social-icon"> YouTube
+        </a>
+    </div>
 </footer>
 
     <!-- Inclua o Bootstrap JavaScript e o jQuery -->
@@ -105,5 +189,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
-
+</div>
 </html>

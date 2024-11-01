@@ -11,6 +11,21 @@ btn.addEventListener('click', () => {
         btn.textContent = 'Leia Mais'; // Restaura o texto do botão
     }
 });
+//Carrossel
+
+let currentIndex = 0;
+
+function showSlide(index) {
+    const carousel = document.querySelector(".carousel");
+    const totalItems = document.querySelectorAll(".carousel-item").length;
+
+    currentIndex = (index + totalItems) % totalItems; // para ciclar corretamente
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function moveSlide(step) {
+    showSlide(currentIndex + step);
+}
 
 // Função para carregar e exibir dados da planilha do Google Sheets
 function loadGoogleSheetData() {

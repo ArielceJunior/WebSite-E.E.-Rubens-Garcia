@@ -1,10 +1,42 @@
-header{
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(206, 206, 206);
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh; 
+  flex-direction: column;
+  text-align: center; 
+}
+
+#home::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(assets/fundo.jpg);
+  background-size:cover;
+  background-position: center;
+  filter:opacity(0.2) blur(4px);
+  
+  z-index: -1; 
+}
+
+#home{
+  display: grid;
+  place-items: center; 
+}
+
+
+header{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 .navbar{
-
   display: flex;
   justify-content:center;
   align-items: center;
@@ -13,6 +45,7 @@ header{
   margin-bottom: 25px;
   background-color: rgba(255,255,255,0.9);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+
 }
 
 .navbar li{
@@ -52,30 +85,30 @@ header{
   
 }
 
-.navbar .nav-links {
-  display: flex;
-  gap: 15px;
-  font-size: 1.2em;
+.submenu {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 10px 0;
+  list-style: none;
+  min-width: 150px;
+  border: 2px solid rgb(83, 2, 2); 
+  border-radius: 8px; 
+  
 }
 
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: whitesmoke;
-    margin: 0;
+.submenu li {
+  padding: 10px;
+  
 }
-#home::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(assets/fundo.jpg);
-    background-size:cover;
-    background-position: center;
-    filter: blur(8px) ; 
-    z-index: -1; 
+
+.has-submenu:hover .submenu {
+  display: block;
+  
 }
+
 .logo{
     display: grid;
     place-items: center;
@@ -91,71 +124,46 @@ body{
   
   
 }
-
-  .submenu {
-    display: none; 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    padding: 10px 0;
-    list-style: none;
-    min-width: 150px;
-    border: 2px solid rgb(83, 2, 2); 
-    border-radius: 8px; 
-    
+#nome {
+  background-color: #f2f2f2; 
+  padding: 20px; 
+  width: fit-content; 
+  margin: 10px auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  text-align: center;
+  
 }
 
-.submenu li {
-    padding: 10px;
-    
+#nome h1 {
+  color: #333; /* Cor do texto */
+  font-size: 2em;
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
 }
-
-.has-submenu:hover .submenu {
-    display: block;
-    
-}
-
-  h1{
-    
-    font-size: 3em; 
-    font-weight: bold;
-    color: black;
-    background-color: rgba(255,255,255,0.7);
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    border-radius: 8px; 
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 1); 
-  }
-
-  #home{
-    display: grid;
-    place-items: center; 
-  }
-  #home img{
-    width:900px ;
-  }
 
   h2{
     padding: 2%;
     text-align: center;
+    font-size: 3em;
   }
 
   .cartao{
     margin-top: 1%;
-    max-width: 60%; 
+    max-width: 100%; 
     margin: 2 auto;
-    padding: 20px; 
-    background-color: white; 
+    background-color: white;
     border-radius: 8px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+  .cartaoc{
+    margin-top: 10px;
+    padding: 10px; 
   }
 
   .cartao2{
     margin-top: 1%;
-    max-width: 60%; 
     margin: 2 auto;
     padding: 20px; 
     background-color: rgba(255,255,255,0.62); 
@@ -164,8 +172,7 @@ body{
   }
 
   #historia{
-    
-    padding: 2%;
+    padding-bottom: 2%;
     text-align: center;  
   }
 
@@ -174,6 +181,11 @@ body{
     text-align: justify;
     text-indent: 20px;
     margin: 20px;
+  }
+
+  .hist-content{
+    padding-left: 250px;
+    padding-right: 250px;
   }
 
   .mais {
@@ -194,10 +206,189 @@ body{
 #leiaMaisBtn:hover {
     background-color: gray; 
 }
-  footer{
-    background-color: gray;
-    padding: 1px;
-    text-align:center;
-    font-weight: bold;
-  }
-  
+
+#know h2{
+  color: white;
+}
+
+.carousel-container {
+  position: relative;
+  width: 80%;
+  max-width: 1300px;
+  margin: auto;
+  margin-top: 0px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  display: flex;
+  width: 100%;
+  flex: 0 0 100%;
+  align-items: center;
+  box-sizing: border-box;
+  height: 500px; /* Define uma altura fixa */
+}
+
+.carousel-item img {
+  width: 50%;
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 8px 0 0 8px;
+}
+
+.carousel-text {
+  padding: 20px;
+  width: 50%;
+  background-color: #ffffff;
+  border-radius: 0 8px 8px 0;
+  box-sizing: border-box;
+  height: 100%; /* Alinha com a altura da imagem */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-text h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.carousel-text p {
+  font-size: 1em;
+  color: #555;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+  color: #000;
+}
+
+#contatos,#map{
+  margin: 2%;
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #e0eaff;
+}
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contact-links a {
+  color: #000000; 
+  font-size: 1em; 
+  text-decoration: none; 
+  display: flex; 
+  align-items: center; 
+}
+
+.contact-icon {
+  display: block; 
+  justify-content: center; 
+  align-items: center;
+  gap: 15px; 
+  margin-top: 10px; 
+}
+
+.contact-icon {
+  width: 30px; /* Tamanho dos ícones */
+  height: 30px;
+  transition: transform 0.3s; /* Animação ao passar o mouse */
+}
+
+.contact-icon:hover {
+  transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+footer{
+  background-color: gray;
+  padding: 1px;
+  text-align:center;
+  font-weight: bold;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links a {
+  color: #000000; /* Cor do texto */
+  font-size: 1em; /* Tamanho do texto */
+  text-decoration: none; /* Remove underline */
+  display: flex; /* Usado para alinhar ícone e texto */
+  align-items: center; /* Alinha ícone e texto verticalmente */
+}
+
+.social-links a img.social-icon {
+  width: 24px; /* Ajuste o tamanho do ícone */
+  height: 24px; /* Ajuste o tamanho do ícone */
+  margin-right: 8px; /* Espaçamento entre ícone e texto */
+}
+.social-links a img.social-icon {
+  width: 24px; /* Ajuste o tamanho do ícone */
+  height: 24px; /* Ajuste o tamanho do ícone */
+  margin-right: 8px; /* Espaçamento entre ícone e texto */
+}
+
+
+
+.social-links a:hover {
+  color: #ddd; /* Cor do texto ao passar o mouse */
+}
