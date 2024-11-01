@@ -1,16 +1,10 @@
-// Botão Leia Mais
-const btn = document.getElementById('leiaMaisBtn');
-const maisTexto = document.querySelector('.mais');
-
-btn.addEventListener('click', () => {
-    if (maisTexto.style.display === 'none' || maisTexto.style.display === '') {
-        maisTexto.style.display = 'inline'; // Mostra o texto
-        btn.textContent = 'Leia Menos'; // Altera o texto do botão
-    } else {
-        maisTexto.style.display = 'none'; // Oculta o texto
-        btn.textContent = 'Leia Mais'; // Restaura o texto do botão
-    }
+// Função para lidar com o clique no botão de doação
+document.getElementById("donateBtn").addEventListener("click", function () {
+    // Substitua esta linha com a lógica real de redirecionamento para uma página de doação
+    alert("Redirecionando para a página de doação...");
 });
+
+
 
 // Função para carregar e exibir dados da planilha do Google Sheets
 function loadGoogleSheetData() {
@@ -57,8 +51,6 @@ function initGoogleSheetsApi() {
 
 // Carrega a API do Google Sheets e inicia a aplicação
 gapi.load('client', initGoogleSheetsApi);
-                
-
 
 
 
